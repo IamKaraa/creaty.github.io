@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sosial.css">
+    <title>Creaty</title>
+</head>
+<body id="bg-body">
+    <div class="wrapper">
+        <!-- header -->
+        <div class="navbar">
+            <h1><a href="index.html">Creaty</a></h1>
+            <ul>
+                <li><a href="pricing.html">PRICING</a></li>
+                <li><a href="conten.html">CONTENT</a></li>
+                <li><a href="bio.html">BIO</a></li>
+                <li><a href="sosial.html">SOCIAL</a></li>
+            </ul>
+        </div>
+        <!-- header end -->
+
+        <!-- content -->
+        <div class="content1">
+            <h1>Creaty</h1>
+            <p>if you are interested, you can try contacting us</p>
+        </div>
+
+        <div class="conten2">
+            <form class="contact-form" action="mailto:idcreaty@example.com" method="POST" enctype="text/plain">
+                <h2>Contact Us</h2>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="Name" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="Email" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="Message" id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+        </div>
+        <!-- content end -->
+
+        <!-- footer -->
+        <footer>
+            <div class="ig" id="igklik">
+                <img src="https://static.wixstatic.com/media/c56e34_ceccfebed14b43d983a88ca524b18169~mv2.png/v1/fill/w_22,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/instagram-logo1-785x785.png" alt="Creaty_id">
+            </div>
+            <p>creativity everywhere</p>
+            <p>&copy; 2025 by Creaty</p>
+        </footer>
+        
+        <script>
+            document.getElementById('igklik').addEventListener('click', function() {
+                window.location.href = 'https://www.instagram.com/creaty_id';
+            });
+        </script>
+        <!-- footer end -->
+    </div>
+
+      <script>
+        const images = [
+          'foto/1.jpg',
+          'foto/4.jpg',
+          'foto/7.jpeg'
+        ];
+        let index = 0;
+    
+        const bg = document.getElementById('bg-body');
+    
+        bg.style.backgroundImage = `url('${images[index]}')`;
+    
+        setInterval(() => {
+          index = (index + 1) % images.length;
+          bg.style.backgroundImage = `url('${images[index]}')`;
+        }, 60000);
+      </script>
+</body>
+</html>
